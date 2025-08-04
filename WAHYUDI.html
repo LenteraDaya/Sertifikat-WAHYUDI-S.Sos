@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sertifikat Bimtek</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #0b1e3f, #1a2e4f);
+      color: #ffffff;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #ffffff0a;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .logo img {
+      width: 80px;
+      border-radius: 12px;
+    }
+    h2, h3 {
+      text-align: center;
+      margin: 10px 0;
+    }
+    .section {
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+    }
+    .label {
+      font-weight: 600;
+      color: #f0c040;
+      margin-top: 8px;
+    }
+    .value {
+      font-weight: 400;
+      color: #ffffff;
+    }
+    .info {
+      font-size: 15px;
+      color: #ffffff;
+      margin-top: 6px;
+    }
+    .centered {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="corel.png" alt="Logo Lentera Daya Persada">
+    </div>
+
+    <!-- Judul -->
+    <h2>CV Lentera Daya Persada</h2>
+
+    <div class="centered">
+      <!-- Status Dokumen -->
+      <div class="section">
+        <h3>Status Dokumen: <span style="color: gold;">Aktif</span></h3>
+      </div>
+
+      <!-- Bimtek -->
+      <div class="section">
+        <div class="label">Bimbingan Teknis:</div>
+        <div class="value">Audit Investigasi dan Kerugian Keuangan Negara</div>
+      </div>
+
+      <!-- Data Peserta -->
+      <div class="section">
+        <div class="label">Nama Peserta:</div>
+        <div class="value">WAHYUDI, S.Sos</div>
+
+        <div class="label">Jabatan:</div>
+        <div class="value">AUDITOR AHLI MADYA</div>
+
+        <div class="label">Instansi:</div>
+        <div class="value">Inspektorat Kabupaten Ponorogo</div>
+
+        <div class="label">Penandatangan:</div>
+        <div class="value">Firdian Setiya Arinata, S.Pd, M.Pd</div>
+      </div>
+
+      <!-- Info Pindai -->
+      <div class="section">
+        <div class="label">Informasi Pindai:</div>
+        <div class="info">📅 Tanggal Pindai: <span class="value" id="tanggal"></span></div>
+        <div class="info">⏰ Waktu Pindai: <span class="value" id="waktu"></span></div>
+      </div>
+
+      <!-- Tanda Tangan -->
+      <div class="section">
+        <div class="label">Penandatanganan:</div>
+        <div class="info">📅 Tanggal: <span class="value">1 Agustus 2025</span></div>
+        <div class="info">⏰ Waktu: <span class="value">14.00 WIB</span></div>
+      </div>
+
+      <!-- Keterangan -->
+      <div class="section">
+        <div class="value">Dokumen ini telah ditandatangani secara elektronik</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const now = new Date();
+    const tanggal = now.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+    const waktu = now.toLocaleTimeString('id-ID');
+    document.getElementById("tanggal").textContent = tanggal;
+    document.getElementById("waktu").textContent = waktu;
+  </script>
+</body>
+</html>
